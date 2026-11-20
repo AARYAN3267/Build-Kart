@@ -11,7 +11,7 @@ export const INITIAL_VENDORS = [
     owner: "Ramesh Sharma",
     phone: "+91 98260 12345",
     email: "ramesh.sharma@sharmacement.in",
-    category: "Cement & Construction Materials",
+    category: "Cement, Steel, Hardware & Construction Supplies",
     address: "Plot 42, Commercial Zone-II, MP Nagar",
     city: "Bhopal",
     state: "Madhya Pradesh",
@@ -27,7 +27,7 @@ export const INITIAL_VENDORS = [
     reviewsCount: 142,
     verified: true,
     logo: "https://images.unsplash.com/photo-1541888946425-d0fbb1861593?w=150&auto=format&fit=crop&q=80",
-    description: "Premier authorized wholesale & retail distributor for UltraTech, Ambuja, and ACC Cements. Serving central MP contractors with rapid 24h site dispatch.",
+    description: "Premier authorized wholesale & retail distributor for UltraTech, Tata Steel, Havells, Astral, Asian Paints, tiles and construction hardware. Serving central MP contractors with rapid 24h site dispatch.",
     transportFleet: [
       { id: "T1", type: "Mini Truck", model: "Tata Ace Gold", capacityKg: 1200, status: "Available", ratePerKm: 28, estPickupMin: 25 },
       { id: "T2", type: "Pickup Truck", model: "Mahindra Bolero Maxi", capacityKg: 2000, status: "Available", ratePerKm: 35, estPickupMin: 35 },

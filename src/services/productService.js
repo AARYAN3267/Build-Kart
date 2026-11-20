@@ -11,7 +11,18 @@ export const productService = {
   getInitialProducts() {
     try {
       const stored = localStorage.getItem(STORAGE_KEY_PRODUCTS);
-      if (stored) return JSON.parse(stored);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        // Seamlessly merge any new demo catalog products so all categories appear immediately
+        const existingIds = new Set(parsed.map((p) => p.id));
+        const missing = INITIAL_PRODUCTS.filter((p) => !existingIds.has(p.id));
+        if (missing.length > 0) {
+          const merged = [...parsed, ...missing];
+          localStorage.setItem(STORAGE_KEY_PRODUCTS, JSON.stringify(merged));
+          return merged;
+        }
+        return parsed;
+      }
     } catch (e) {
       console.error('Failed reading products from storage:', e);
     }
